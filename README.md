@@ -93,10 +93,17 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### Built With
 
-- Semantic HTML5 markup
-- CSS
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- JavaScript
+- Node.js
+- Sequelize.js
+- Express.js
+- Express-Session
+- Express-Handlebars
+- Handlebars.js
+- MySQL2
+- MySQL
+- Bcrypt
+- Bcrypt.js
 
 ### What I Learned
 
@@ -126,7 +133,11 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ### Useful Resources
 
+- [Bootstrap](https://getbootstrap.com/)
 - [Level Up Coding: Database seeding in Node.js](https://levelup.gitconnected.com/database-seeding-in-node-js-2b2eec5bfaa1)
+- [NPM: uuid](https://www.npmjs.com/package/uuid)
+- [Sequelize: Validations & Constraints](https://sequelize.org/docs/v6/core-concepts/validations-and-constraints/)
+- [Sequelize: Hooks](https://sequelize.org/docs/v6/other-topics/hooks/)
 
 ## Author
 
