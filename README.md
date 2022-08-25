@@ -140,6 +140,7 @@ Use this section to outline areas that you want to continue focusing on in futur
 - [NPM: uuid](https://www.npmjs.com/package/uuid)
 - [Sequelize: Validations & Constraints](https://sequelize.org/docs/v6/core-concepts/validations-and-constraints/)
 - [Sequelize: Hooks](https://sequelize.org/docs/v6/other-topics/hooks/)
+- [Stack Overflow: Getting text in a Bootstrap 5 card header right aligned](https://stackoverflow.com/questions/69624649/getting-text-in-a-bootstrap-5-card-header-right-aligned)
 
 ## Author
 
