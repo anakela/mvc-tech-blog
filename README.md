@@ -134,6 +134,7 @@ Use this section to outline areas that you want to continue focusing on in futur
 ### Useful Resources
 
 - [Bootstrap](https://getbootstrap.com/)
+- [Coolors.co](https://coolors.co/ccdbdc-80ced7-63c7b2-8e6c88-263d42)
 - [Gauger.io: Fonticon](https://gauger.io/fonticon/)
 - [Handlebars: Built-in Helpers](https://handlebarsjs.com/guide/builtin-helpers.html)
 - [Level Up Coding: Database seeding in Node.js](https://levelup.gitconnected.com/database-seeding-in-node-js-2b2eec5bfaa1)
