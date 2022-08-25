@@ -1,3 +1,42 @@
 :root {
-    
+    --light-gray: #ccdbdc;
+    --light-blue: #80ced7;
+    --light-green: #63c7b2;
+    --purple: #8e6c88;
+    --dark-green: #263d42;
 }
+
+body {
+    background-color: #fff;
+}
+
+nav {
+    background-color: var(--light-green);
+}
+
+.navbar-brand {
+    font-size: 32px;
+    color: var(--light-green);
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.nav-item a {
+    color: #fff;
+    font-size: 24px;
+    margin: 5px;
+}
+
+.nav-item a:active {
+    color: var(--dark-green);
+}
+
+/* .nav-item {
+    background-color: #fff;
+    margin: 5px;
+    border-radius: 10px;
+    width: 100px;
+    align-items: center;
+} */
