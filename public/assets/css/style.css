@@ -23,6 +23,13 @@ nav {
     margin: 5px;
 }
 
+.navbar-brand a,
+.navbar-brand a:hover,
+.navbar-brand a:visited,
+.navbar-brand a:active {
+    text-decoration: none;
+}
+
 .nav-item a {
     color: #fff;
     font-size: 24px;
@@ -31,6 +38,10 @@ nav {
 
 .nav-item a:active {
     color: var(--dark-green);
+}
+
+.card {
+    margin: 20px;
 }
 
 /* .nav-item {

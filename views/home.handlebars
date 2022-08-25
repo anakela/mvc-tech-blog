@@ -1,0 +1,14 @@
+<section class="container col-12-sm" id="home">
+    {{#each blogs as |blog| }}
+    <div class="card col-10-sm">
+        <div class="card-header">
+            Posted by {{user.username}} on {{blog.date}}
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">{{blog.title}}</h5>
+            <p class="card-text">{{blog.body}}</p>
+            <a href="/blog/{{blog.id}}" class="btn btn-primary">Read More</a>
+        </div>
+    </div>
+    {{/each}}
+</section>
