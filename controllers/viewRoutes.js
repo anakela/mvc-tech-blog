@@ -48,7 +48,7 @@ router.get('/blog/:id', async (req, res) => {
     }
 });
 
-// Render user's profile.
+// Render user profile page.
 router.get('/user-profile', withAuth, async (req, res) => {
     try {
         const userData = await User.findByPk(req.session.user_id, {
