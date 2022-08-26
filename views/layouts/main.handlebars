@@ -31,18 +31,21 @@
                             <a class="nav-link text-center" aria-current="page" href="/">Home</a>
                         </li>
                         <li class="nav-item text-center">
+                            {{#unless logged_in}}
+                            <a class="nav-link" href="/sign-in">Dashboard</a>
+                            {{/unless}}
+                            {{#if logged_in}}
                             <a class="nav-link" href="/user-profile">Dashboard</a>
+                            {{/if}}
                         </li>
-                        {{#unless logged_in}}
                         <li class="nav-item text-center">
+                            {{#unless logged_in}}
                             <a class="nav-link" href="/sign-in">Sign In</a>
-                        </li>
-                        {{/unless}}
-                        {{#if logged_in}}
-                        <li class="nav-item text-center">
+                            {{/unless}}
+                            {{#if logged_in}}
                             <a class="nav-link" href="/sign-out">Sign Out</a>
+                            {{/if}}
                         </li>
-                        {{/if}}
                     </ul>
                 </span>
             </div>

@@ -1,0 +1,49 @@
+<section class="container col-12-sm" id="sign-in">
+    <h1 class="text-center">Log Into the Tech Blog</h1>
+    <form class="col-6 offset-3" id="sign-in-form">
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email Address</label>
+            <input type="email" class="form-control" id="email-input" aria-describedby="emailHelp">
+            {{!-- <div id="emailHelp" class="form-text">Please enter your email address here.</div> --}}
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="pass-input">
+        </div>
+        <div class="col text-center">
+            <button type="submit" class="btn btn-primary" id="sign-in-btn">Sign In</button>
+        </div>
+    </form>
+    <p class="text-center" id="sign-up-here">Don't have an account? <a href="/sign-up">Sign up here!</a></p>
+
+    <div class="modal-dialog modal-dialog-centered" id="invalid-email-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Invalid Email</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Please enter a valid email address.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="invalid-email-close-btn">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-dialog modal-dialog-centered" id="invalid-pass-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Invalid Password</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Please enter a valid password.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="invalid-pass-close-btn">OK</button>
+            </div>
+        </div>
+    </div>
+
+</section>

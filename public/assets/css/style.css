@@ -45,6 +45,19 @@ nav {
     margin: 20px;
 }
 
+#sign-in-form {
+    margin-top: 5vh;
+}
+
+#sign-up-here {
+    margin: 10px;
+}
+
+#invalid-email-modal,
+#invalid-pass-modal {
+    display: none;
+}
+
 /* .nav-item {
     background-color: #fff;
     margin: 5px;
