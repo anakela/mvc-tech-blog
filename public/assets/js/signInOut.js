@@ -1,24 +1,21 @@
 const signInBtn = document.getElementById('sign-in-btn');
-const signInEmail = document.getElementById('email-input');
-
-const emailCloseBtn = document.getElementById('invalid-email-close-btn');
-const emailModal = document.getElementById('invalid-email-modal');
-
+const signInUser = document.getElementById('user-input');
+const userCloseBtn = document.getElementById('invalid-user-close-btn');
+const userModal = document.getElementById('invalid-user-modal');
 const signInPass = document.getElementById('pass-input');
-
 const passCloseBtn = document.getElementById('invalid-pass-close-btn');
 const passModal = document.getElementById('invalid-pass-modal');
 
 signInBtn?.addEventListener('click', async (event) => {
     event.preventDefault();
-    const email = signInEmail.value;
+    const username = signInUser.value;
     const password = signInPass.value;
 
-    if (email.trim().length === 0) {
+    if (username.trim().length === 0) {
         $(document).ready(function() {
-            $(emailModal).modal("show");
-            $(emailCloseBtn).click(function() {
-                $(emailModal).modal("hide");
+            $(userModal).modal("show");
+            $(userCloseBtn).click(function() {
+                $(userModal).modal("hide");
             });
         });
         return;
@@ -41,7 +38,7 @@ signInBtn?.addEventListener('click', async (event) => {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                email,
+                username,
                 password,
             })
         });

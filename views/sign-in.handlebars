@@ -2,12 +2,11 @@
     <h1 class="text-center">Log Into the Tech Blog</h1>
     <form class="col-6 offset-3" id="sign-in-form">
         <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email Address</label>
-            <input type="email" class="form-control" id="email-input" aria-describedby="emailHelp">
-            {{!-- <div id="emailHelp" class="form-text">Please enter your email address here.</div> --}}
+            <label for="user-input" class="form-label">Username</label>
+            <input type="username" class="form-control" id="user-input" aria-describedby="userHelp">
         </div>
         <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <label for="password-input" class="form-label">Password</label>
             <input type="password" class="form-control" id="pass-input">
         </div>
         <div class="col text-center">
@@ -16,17 +15,18 @@
     </form>
     <p class="text-center" id="sign-up-here">Don't have an account? <a href="/sign-up">Sign up here!</a></p>
 
-    <div class="modal-dialog modal-dialog-centered" id="invalid-email-modal">
+    <div class="modal-dialog modal-dialog-centered" id="invalid-user-modal">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Invalid Email</h5>
+                <h5 class="modal-title">Invalid Username</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <p>Please enter a valid email address.</p>
+                <p>Please enter a valid username.</p>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="invalid-email-close-btn">OK</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                    id="invalid-user-close-btn">OK</button>
             </div>
         </div>
     </div>
@@ -41,7 +41,8 @@
                 <p>Please enter a valid password.</p>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="invalid-pass-close-btn">OK</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                    id="invalid-pass-close-btn">OK</button>
             </div>
         </div>
     </div>
