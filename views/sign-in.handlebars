@@ -13,36 +13,20 @@
             <button type="submit" class="btn btn-primary" id="sign-in-btn">Sign In</button>
         </div>
     </form>
-    <p class="text-center" id="sign-up-here">Don't have an account? <a href="/sign-up">Sign up here!</a></p>
+    <p class="text-center" id="sign-up-here">Don't have an account? <a href="/sign-up" title="Sign Up">Sign up here!</a></p>
 
-    <div class="modal-dialog modal-dialog-centered" id="invalid-user-modal">
+    <div class="modal-dialog modal-dialog-centered" id="invalid-credentials-modal">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Invalid Username</h5>
+                <h5 class="modal-title">Invalid Credentials</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <p>Please enter a valid username.</p>
+                <p>Your credentials are not valid.  Please enter a valid username and password.</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
                     id="invalid-user-close-btn">OK</button>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal-dialog modal-dialog-centered" id="invalid-pass-modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Invalid Password</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <p>Please enter a valid password.</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
-                    id="invalid-pass-close-btn">OK</button>
             </div>
         </div>
     </div>

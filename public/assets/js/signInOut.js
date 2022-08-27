@@ -12,19 +12,22 @@ signInBtn?.addEventListener('click', async (event) => {
     const password = signInPass.value;
 
     if (username.trim().length === 0) {
-        $(document).ready(function() {
+        $(document).ready(function () {
             $(userModal).modal("show");
-            $(userCloseBtn).click(function() {
+            $(userCloseBtn).click(function () {
                 $(userModal).modal("hide");
             });
         });
+
+        username.innerText = '';
+        password.innerText = '';
         return;
     }
 
-    if(password.trim().length < 12) {
-        $(document).ready(function() {
+    if (password.trim().length < 12) {
+        $(document).ready(function () {
             $(passModal).modal("show");
-            $(passCloseBtn).click(function() {
+            $(passCloseBtn).click(function () {
                 $(closeModal).modal("hide");
             });
         });
@@ -44,7 +47,7 @@ signInBtn?.addEventListener('click', async (event) => {
         });
         await response.json();
 
-        if (response.ok) window.location.href='/';
+        if (response.ok) window.location.href = '/';
     } catch (error) {
         res.status(500).json({ error });
     }
