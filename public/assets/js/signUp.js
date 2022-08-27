@@ -13,8 +13,14 @@ signUpBtn?.addEventListener('click', async (event) => {
 
     if (username.trim().length === 0) {
         $(document).ready(function () {
-            
+
         });
+        return;
+    }
+
+    if (!password.value === confirmPassword.value) {
+        alert(`Oops, your passwords don't match.  Please try again.`);
+        return;
     }
 
 });
