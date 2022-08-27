@@ -55,8 +55,7 @@ nav {
     margin: 10px;
 }
 
-#invalid-user-modal,
-#invalid-pass-modal {
+#invalid-credentials-modal {
     display: none;
 }
 

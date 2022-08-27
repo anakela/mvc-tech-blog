@@ -1,21 +1,19 @@
 const signInBtn = document.getElementById('sign-in-btn');
 const signInUser = document.getElementById('user-input');
-const userCloseBtn = document.getElementById('invalid-user-close-btn');
-const userModal = document.getElementById('invalid-user-modal');
+const credentialsCloseBtn = document.getElementById('invalid-credentials-close-btn');
+const credentialsModal = document.getElementById('invalid-credentials-modal');
 const signInPass = document.getElementById('pass-input');
-const passCloseBtn = document.getElementById('invalid-pass-close-btn');
-const passModal = document.getElementById('invalid-pass-modal');
 
 signInBtn?.addEventListener('click', async (event) => {
     event.preventDefault();
     const username = signInUser.value;
     const password = signInPass.value;
 
-    if (username.trim().length === 0) {
+    if (username.trim().length === 0 || password.trim().length < 12) {
         $(document).ready(function () {
-            $(userModal).modal("show");
-            $(userCloseBtn).click(function () {
-                $(userModal).modal("hide");
+            $(credentialsModal).modal("show");
+            $(credentialsCloseBtn).click(function () {
+                $(credentialsModal).modal("hide");
             });
         });
 
@@ -24,15 +22,15 @@ signInBtn?.addEventListener('click', async (event) => {
         return;
     }
 
-    if (password.trim().length < 12) {
-        $(document).ready(function () {
-            $(passModal).modal("show");
-            $(passCloseBtn).click(function () {
-                $(closeModal).modal("hide");
-            });
-        });
-        return;
-    }
+    // if (password.trim().length < 12) {
+    //     $(document).ready(function () {
+    //         $(passModal).modal("show");
+    //         $(passCloseBtn).click(function () {
+    //             $(closeModal).modal("hide");
+    //         });
+    //     });
+    //     return;
+    // }
 
     try {
         const response = await fetch('/api/user/sign-in', {
