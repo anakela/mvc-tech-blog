@@ -63,6 +63,10 @@ h1 {
     margin: 10px;
 }
 
+.modal-dialog {
+    z-index: 10;
+}
+
 /* .nav-item {
     background-color: #fff;
     margin: 5px;

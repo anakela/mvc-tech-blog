@@ -43,11 +43,14 @@
                             <a class="nav-link" href="/sign-in">Sign In</a>
                             {{/unless}}
                             {{#if logged_in}}
-                            <a class="nav-link" href="/sign-out">Sign Out</a>
+                            {{!-- Create button here instead to link it to sign out page. --}}
+                            {{!-- <div class="col text-center"> --}}
+                                <button type="submit" class="btn btn-primary" id="sign-out-btn">Sign Out</button>
+                            {{!-- </div> --}}
+                            {{!-- <a class="nav-link" href="/sign-out" id="sign-out-link">Sign Out</a> --}}
                             {{/if}}
-                        </li>
+                        </li> 
                     </ul>
-                </span>
             </div>
 
         </div>
@@ -57,9 +60,13 @@
         {{{body}}}
     </main>
 
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"></script>
+    <script src="/assets/js/signInOut.js"></script>
+    <script src="/assets/js/signUp.js"></script>
 
 </body>
 

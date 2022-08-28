@@ -10,25 +10,26 @@ router.post('/', async (req, res) => {
             res.status(200).json(userData);
         });
     } catch (error) {
-        res.status(500).res.json({ error });
+        res.status(500).json({ error });
     }
 });
 
 router.post('/sign-in', async (req, res) => {
+    console.log(req.body);
     try {
         const userData = await User.findOne({
-            where: { email: req.body.email },
+            where: { username: req.body.username },
         });
 
         if (!userData) {
-            res.status(400).res.json({ message: `Incorrect email or password.  Please try again.` });
+            res.status(400).json({ message: `Incorrect username or password.  Please try again.` });
             return;
         }
 
         const validPassword = await userData.checkPassword(req.body.password);
 
         if (!validPassword) {
-            res.status(400).res.json({ message: `Incorrect email or password.  Please try again.` });
+            res.status(400).json({ message: `Incorrect username or password.  Please try again.` });
             return;
         }
 
@@ -39,7 +40,7 @@ router.post('/sign-in', async (req, res) => {
             res.json({ user: userData, message: `Yay!  You've successfully logged in!` });
         });
     } catch (error) {
-        res.status(500).res.json({ error });
+        res.status(500).json({ error });
     }
 });
 
@@ -57,9 +58,10 @@ router.post('/sign-up', async (req, res) => {
 });
 
 router.post('/sign-out', async (req, res) => {
+    console.log(req.session);
     if (req.session.logged_in) {
         req.session.destroy(() => {
-            res.status(204).end();
+            res.status(204).redirect('/sign-out');
         });
     } else {
         res.status(400).end();
