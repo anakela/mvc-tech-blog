@@ -10,11 +10,27 @@ router.post('/', withAuth, async (req, res) => {
             ...req.body,
             user_id: req.session.user_id,
         });
-        res.status(200).res.json(newBlog);
+        res.status(200).json(newBlog);
     } catch (error) {
-        res.status(500).res.json({ error });
+        res.status(500).json({ error });
     }
 });
+
+// // View a blog post
+// router.get('/:id', withAuth, async (req, res) => {
+//     console.log(req.params.id);
+//     try {
+//         /* const viewBlog =*/ await Blog.findByPk({
+//             where: {
+//                 id: req.params.id,
+//             }
+//         });
+
+//         res.status(200).json();
+//     } catch (error) {
+//         res.status(500).json({ error });
+//     }
+// });
 
 // Update a blog post.
 router.put('/:id', withAuth, async (req, res) => {
@@ -24,9 +40,9 @@ router.put('/:id', withAuth, async (req, res) => {
             body: req.body.body,
             user_id: req.session.user_id,
         });
-        res.status(200).res.json(updateBlog);
+        res.status(200).json(updateBlog);
     } catch (error) {
-        res.status(500).res.json({ error });
+        res.status(500).json({ error });
     }
 });
 
@@ -40,12 +56,12 @@ router.delete('/:id', withAuth, async (req, res) => {
             }
         });
         if (!deleteBlog) {
-            res.status(400).res.json({ message: `Sorry, there's no blog with that ID!`});
+            res.status(400).json({ message: `Sorry, there's no blog with that ID!`});
             return;
         }
-        res.status(200).res.json(deleteBlog);
+        res.status(200).json(deleteBlog);
     } catch (error) {
-        res.status(500).res.json({ error });
+        res.status(500).json({ error });
     }
 });
 

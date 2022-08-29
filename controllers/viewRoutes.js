@@ -38,9 +38,9 @@ router.get('/blog/:id', async (req, res) => {
         });
 
         const blog = blogData.get({ plain: true });
-
+        console.log(blog);
         res.render('blog', {
-            ...blog,
+            blog,
             logged_in: req.session.logged_in,
         });
     } catch (error) {
@@ -59,7 +59,7 @@ router.get('/user-profile', withAuth, async (req, res) => {
         const user = userData.get({ plain: true });
 
         res.render('user-profile', {
-            ...user,
+            user,
             logged_in: true,
         });
     } catch (error) {
