@@ -8,13 +8,16 @@
     </div>
     {{/with}}
 
+    <hr />
+
     {{#if logged_in}}
     <form>
         <div class="form-group mb-2">
-            <label for="commentInput mb-3">Add a Comment</label>
+            <label for="commentInput mb-3">Leave a Comment</label>
             <input type="comment" class="form-control" id="comment-textbox" placeholder="Type your comment here.">
         </div>
-        <button type="submit" class="btn btn-primary" id="post-comment" data-blogid="{{blog.id}}">Post Comment</button>
+        <button type="submit" class="btn btn-primary" id="post-comment" data-blogid="{{blog.id}}"
+            data-bs-target="#empty-comment-modal">Post Comment</button>
     </form>
     {{/if}}
 
@@ -28,4 +31,22 @@
     </div>
     {{/with}}
     {{/each}}
+
+    <div class="modal" tabindex="-1" id="empty-comment-modal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Empty Comment</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Sorry, comments cannot be empty. Please add content to the text box and try posting again.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                        id="empty-comment-close-btn">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>

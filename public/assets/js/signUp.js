@@ -21,8 +21,8 @@ signUpBtn?.addEventListener('click', async (event) => {
         return;
     }
 
-    if (password.trim().length < 12) {
-        alert(`Please enter a valid password.  It must be at least 12 characters long.`)
+    if (password.trim().length < 8) {
+        alert(`Please enter a valid password.  It must be at least 8 characters long.`)
         return;
     }
 
