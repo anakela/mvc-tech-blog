@@ -7,4 +7,25 @@
         <p>{{body}}</p>
     </div>
     {{/with}}
+
+    {{#if logged_in}}
+    <form>
+        <div class="form-group mb-2">
+            <label for="commentInput mb-3">Add a Comment</label>
+            <input type="comment" class="form-control" id="comment-textbox" placeholder="Type your comment here.">
+        </div>
+        <button type="submit" class="btn btn-primary" id="post-comment" data-blogid="{{blog.id}}">Post Comment</button>
+    </form>
+    {{/if}}
+
+    {{#each comments as |comment|}}
+    {{#with comment}}
+    <div class="card">
+        <h5 class="card-header">Posted by {{user.username}} on {{format_date date}}</h5>
+        <div class="card-body">
+            <p class="card-text">{{body}}</p>
+        </div>
+    </div>
+    {{/with}}
+    {{/each}}
 </section>

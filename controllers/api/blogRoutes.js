@@ -16,22 +16,6 @@ router.post('/', withAuth, async (req, res) => {
     }
 });
 
-// // View a blog post
-// router.get('/:id', withAuth, async (req, res) => {
-//     console.log(req.params.id);
-//     try {
-//         /* const viewBlog =*/ await Blog.findByPk({
-//             where: {
-//                 id: req.params.id,
-//             }
-//         });
-
-//         res.status(200).json();
-//     } catch (error) {
-//         res.status(500).json({ error });
-//     }
-// });
-
 // Update a blog post.
 router.put('/:id', withAuth, async (req, res) => {
     try {

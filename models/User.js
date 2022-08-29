@@ -37,13 +37,6 @@ User.init(
                 len: [12],
             },
         },
-        comment_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'comment',
-                key: 'id',
-            },
-        },
     },
     {
         hooks: {

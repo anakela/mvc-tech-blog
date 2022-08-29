@@ -25,9 +25,9 @@ Blog.hasMany(Comment, {
 });
 
 // A user posts many comments.
-User.belongsToMany(Comment, {
-    foreignKey: 'user_id',
-});
+// User.belongsToMany(Comment, {
+//     foreignKey: 'user_id',
+// });
 
 module.exports = {
     User,

@@ -47,7 +47,6 @@ signUpBtn?.addEventListener('click', async (event) => {
         // Redirects the user to the user profile page.
         window.location.href='/user-profile';
     } catch (error) {
-        console.log({ error: `I'm hit!` });
         res.status(500).json({ error });
     }
 

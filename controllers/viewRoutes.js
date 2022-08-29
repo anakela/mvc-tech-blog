@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Blog, User } = require('../models');
+const { User, Blog, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
 // Display blogs and usernames on initial homepage load.
@@ -33,7 +33,10 @@ router.get('/blog/:id', async (req, res) => {
                 {
                     model: User,
                     attributes: ['username'],
-                }
+                },
+                // {
+                //     model: Comment,
+                // },
             ],
         });
 

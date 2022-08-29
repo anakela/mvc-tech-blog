@@ -1,15 +1,18 @@
 [
     {
+        "id": "93300cd6-d5db-4e56-ab03-e85ee3dd2c50",
         "username": "jack",
         "email": "jackjack@example.com",
         "password": "password1"
     },
     {
+        "id": "5e41fe46-09db-439b-b69d-369162b88357",
         "username": "sally",
         "email": "sally@example.com",
         "password": "password2"
     },
     {
+        "id": "886247c1-0683-47ac-a329-ba7905db5570",
         "username": "zero",
         "email": "zero@example.com",
         "password": "password3"
