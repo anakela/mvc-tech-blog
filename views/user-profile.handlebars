@@ -22,7 +22,7 @@
             <a href="/blog/{{id}}" class="btn btn-primary">Read More</a>
             {{#unless logged_in}}
             {{!-- Edit Blog button --}}
-            <a href="/blog/{{id}}" class="edit-blog-btn btn btn-primary text-right" data-bs-toggle="modal"
+            <a href="/blog/{{id}}" class="btn btn-primary text-right" data-bs-toggle="modal"
                 data-bs-target="#edit-blog-modal-{{id}}" id="edit-blog-btn" data-blogid="{{id}}">Edit Blog</a>
             {{!-- Delete Blog button --}}
             <a href="/blog/{{id}}" class="btn btn-primary" id="delete-blog-btn" data-bs-toggle="modal"
@@ -75,11 +75,13 @@
 
                     <div class="form">
                         <label for="editContent" class="form-label">Content</label>
-                        <textarea class="form-control" id="edit-blog-body-{{id}}" style="height: 100px">{{body}}</textarea>
+                        <textarea class="form-control" id="edit-blog-body-{{id}}"
+                            style="height: 100px">{{body}}</textarea>
                         <label for="floatingTextarea2"></label>
                     </div>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <button onclick="updateBlog(event)" class="btn btn-primary" id="update-blog-btn-{{id}}" data-blogid="{{id}}">Update Blog</button>
+                    <button onclick="updateBlog(event)" class="btn btn-primary" id="update-blog-btn-{{id}}"
+                        data-blogid="{{id}}">Update Blog</button>
                 </form>
             </div>
         </div>
@@ -90,7 +92,7 @@
     {{!-- Delete blog modal --}}
     {{#each user.blogs as |blog| }}
     {{#with blog }}
-    <div class="modal modal-lg" tabindex="-1" id="delete-blog-modal">
+    <div class="modal modal-lg" tabindex="-1" id="delete-blog-modal-{{id}}">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content" id="delete-blog-modal-content">
                 <div class="modal-header">
@@ -98,11 +100,12 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p>Are you sure you'd like to delete {{title}}?</p>
+                    <p id="delete-blog-title-{{id}}">Are you sure you'd like to delete {{title}}?</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Ack! No!</button>
-                    <button onclick="deleteBlog(event)" type="button" class="btn btn-primary" id="delete-blog-btn-{{id}}" data-blogid="{{id}}">Yes,
+                    <button onclick="deleteBlog(event)" type="button" class="btn btn-primary"
+                        id="delete-blog-btn-{{id}}" data-blogid="{{id}}">Yes,
                         Delete.</button>
                 </div>
             </div>
