@@ -63,7 +63,20 @@ nav {
     margin: 10px;
 }
 
+#blog-button-box a {
+    margin: 2px;
+}
+
+#edit-blog-modal-content,
+#create-blog-modal-content {
+    padding: 10px;
+}
+
 h1 {
+    margin: 10px;
+}
+
+#dashboard-blog-entries {
     margin: 10px;
 }
 
@@ -72,11 +85,3 @@ h1 {
     background-color: var(--purple);
     border: 1px solid var(--purple);
 }
-
-/* .nav-item {
-    background-color: #fff;
-    margin: 5px;
-    border-radius: 10px;
-    width: 100px;
-    align-items: center;
-} */

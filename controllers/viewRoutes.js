@@ -27,6 +27,7 @@ router.get('/', async (req, res) => {
 
 // Render individual blog entries.
 router.get('/blog/:id', async (req, res) => {
+    console.log(req.params.id, "GET INDIVIDUAL BLOG");
     try {
         const blogData = await Blog.findByPk(req.params.id, {
             include: [
@@ -34,9 +35,10 @@ router.get('/blog/:id', async (req, res) => {
                     model: User,
                     attributes: ['username'],
                 },
-                // {
-                //     model: Comment,
-                // },
+                {
+                    model: Comment,
+                    include: [{ model: User }]
+                },
             ],
         });
 
@@ -54,15 +56,22 @@ router.get('/blog/:id', async (req, res) => {
 // Render user profile page.
 router.get('/user-profile', withAuth, async (req, res) => {
     try {
+        console.log("User profile route");
         const userData = await User.findByPk(req.session.user_id, {
             attributes: { exclude: ['password'] },
-            include: [{ model: Blog }],
+            include: [
+                {
+                    model: Blog,
+                },
+            ],
         });
-
+        console.log(userData);
         const user = userData.get({ plain: true });
-
+        // const blogs = blogData.get({ plain: true });
+        console.log(user);
         res.render('user-profile', {
             user,
+            // blogs,
             logged_in: true,
         });
     } catch (error) {

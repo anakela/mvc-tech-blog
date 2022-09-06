@@ -2,6 +2,17 @@ const router = require('express').Router();
 const { Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
 
+// Get comments for specific blog.
+// router.get('/:blog_id', async (req, res) => {
+//     try {
+//         const viewComments = await Comment.findAll({
+
+//         });
+//     } catch (error) {
+//         res.status(500).json({ error });
+//     }
+// });
+
 // Create a new comment.
 router.post('/:blog_id', async (req, res) => {
     try {

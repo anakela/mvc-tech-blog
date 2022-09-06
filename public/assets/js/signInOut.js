@@ -11,8 +11,9 @@ signInBtn?.addEventListener('click', async (event) => {
     const username = signInUser.value;
     const password = signInPass.value;
 
-    if (username.trim().length === 0 || password.trim().length < 8) {
+    if (!username || !password) {
         $("#invalid-credentials-modal").modal("show");
+        console.log("triggered");
         return;
     }
 

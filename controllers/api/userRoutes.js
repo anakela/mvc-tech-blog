@@ -48,7 +48,7 @@ router.post('/sign-up', async (req, res) => {
     try {
         const newUser = await User.create(req.body);
         req.session.save(() => {
-            req.session.user = newUser;
+            req.session.user_id = newUser.id;
             req.session.logged_in = true;
             res.json(newUser);
         });
