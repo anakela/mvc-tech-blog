@@ -10,7 +10,6 @@
     {{#each user.blogs as |blog|}}
     {{#with blog}}
     <div class="card col-10-sm" id="dashboard-blog-entries">
-
         <div class="card-header d-flex">
             <h5 class="card-title" id="current-title">{{title}}</h5>
             <span class="ms-auto text-right">Posted by {{user.username}} on {{format_date date}}</span>
@@ -22,14 +21,13 @@
             <a href="/blog/{{id}}" class="btn btn-primary">Read More</a>
             {{#unless logged_in}}
             {{!-- Edit Blog button --}}
-            <a href="/blog/{{id}}" class="btn btn-primary text-right" data-bs-toggle="modal"
+            <a href="/blog/{{id}}" class="btn btn-primary" data-bs-toggle="modal"
                 data-bs-target="#edit-blog-modal-{{id}}" id="edit-blog-btn" data-blogid="{{id}}">Edit Blog</a>
             {{!-- Delete Blog button --}}
             <a href="/blog/{{id}}" class="btn btn-primary" id="delete-blog-btn" data-bs-toggle="modal"
                 data-bs-target="#delete-blog-modal-{{id}}" data-blogid="{{id}}">Delete Blog</a>
             {{/unless}}
         </div>
-
     </div>
     {{/with}}
     {{/each}}

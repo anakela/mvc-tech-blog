@@ -22,24 +22,26 @@
     {{/if}}
 
     {{#each blog.comments as |comment| }}
-    {{!-- {{#with comment}} --}}
+    {{#with comment}}
     <div class="card">
-        <h5 class="card-header">Posted by {{comment.user.username}} on {{format_date comment.date}}</h5>
+        <div class="card-header d-flex">
+            <h5>Posted by {{user.username}} on {{format_date date}}</h5>
+        </div>
+
         <div class="card-body">
-            <p class="card-text">{{comment.body}}</p>
+            <p class="card-text">{{body}}</p>
             {{#unless logged_in}}
             {{!-- Edit Comment button --}}
-            <a href="/{{comment.id}}" class="btn btn-primary text-right" data-bs-toggle="modal"
-                data-bs-target="#edit-comment-modal-{{comment.id}}" id="edit-comment-btn"
-                data-commentid="{{comment.id}}">Edit Comment</a>
+            <a href="/comment/{{id}}" class="btn btn-primary" data-bs-toggle="modal"
+                data-bs-target="#edit-comment-modal-{{id}}" id="edit-comment-btn" data-commentid="{{id}}">Edit
+                Comment</a>
             {{!-- Delete Comment button --}}
-            <a href="/{{comment.id}}" class="btn btn-primary text-right" data-bs-toggle="modal"
-                data-bs-target="#delete-comment-modal-{{comment.id}}" id="delete-comment-btn"
-                data-commentid="{{comment.id}}">Delete Comment</a>
+            <a href="/comment/{{id}}" class="btn btn-primary" id="delete-comment-btn" data-bs-toggle="modal"
+                data-bs-target="#delete-comment-modal-{{id}}" data-commentid="{{id}}">Delete Comment</a>
             {{/unless}}
         </div>
     </div>
-    {{!-- {{/with}} --}}
+    {{/with}}
     {{/each}}
 
     {{!-- Empty comment modal --}}
@@ -62,7 +64,7 @@
     </div>
 
     {{!-- Edit comment modal --}}
-    {{#each user.comments as |comment| }}
+    {{#each blog.comments as |comment| }}
     {{#with comment}}
     <div class="modal" tabindex="-1" id="edit-comment-modal-{{id}}">
         <div class="modal-dialog modal-dialog-centered">
@@ -85,7 +87,8 @@
     {{/each}}
 
     {{!-- Delete comment modal --}}
-    {{#each user.comments as |comment| }}
+    {{#each blog.comments as |comment| }}
+    {{!-- {{#each comment}} --}}
     {{#with comment }}
     <div class="modal modal-lg" tabindex="-1" id="delete-comment-modal-{{id}}">
         <div class="modal-dialog modal-dialog-centered">
@@ -95,7 +98,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p>Are you sure you'd like to delete this comment?</p>
+                    <p id="delete-comment-title-{{id}}">Are you sure you'd like to delete this comment?</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Ack! No!</button>
