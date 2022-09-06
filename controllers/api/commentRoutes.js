@@ -31,7 +31,7 @@ router.get('/:id', async (req, res) => {
 });
 
 // Create a new comment.
-router.post('/:blog_id/:id', async (req, res) => {
+router.post('/:blog_id', async (req, res) => {
     try {
         const newComment = await Comment.create({
             body: req.body.body,

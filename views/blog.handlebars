@@ -31,6 +31,7 @@
         <div class="card-body">
             <p class="card-text">{{body}}</p>
             {{#unless logged_in}}
+            {{!-- {{#unless user}} --}}
             {{!-- Edit Comment button --}}
             <a href="/comment/{{id}}" class="btn btn-primary" data-bs-toggle="modal"
                 data-bs-target="#edit-comment-modal-{{id}}" id="edit-comment-btn" data-commentid="{{id}}">Edit
@@ -38,6 +39,7 @@
             {{!-- Delete Comment button --}}
             <a href="/comment/{{id}}" class="btn btn-primary" id="delete-comment-btn" data-bs-toggle="modal"
                 data-bs-target="#delete-comment-modal-{{id}}" data-commentid="{{id}}">Delete Comment</a>
+            {{!-- {{/unless}} --}}
             {{/unless}}
         </div>
     </div>
