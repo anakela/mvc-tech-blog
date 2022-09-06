@@ -1,15 +1,16 @@
 <section class="container col-12-sm" id="home">
     {{#each blogs as |blog| }}
+    {{#with blog}}
     <div class="card col-10-sm">
         <div class="card-header d-flex">
-            <h5 class="card-title">{{blog.title}}</h5>
-            <span class="ms-auto text-right">Posted by {{user.username}} on {{format_date blog.date}}</span>
+            <h5 class="card-title">{{title}}</h5>
+            <span class="ms-auto text-right">Posted by {{user.username}} on {{format_date date}}</span>
         </div>
         <div class="card-body">
-            
-            <p class="card-text">{{blog.body}}</p>
-            <a href="/blog/{{blog.id}}" class="btn btn-primary">Read More</a>
+            <p class="card-text">{{body}}</p>
+            <a href="/blog/{{id}}" class="btn btn-primary">Read More</a>
         </div>
     </div>
+    {{/with}}
     {{/each}}
 </section>

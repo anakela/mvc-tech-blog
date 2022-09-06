@@ -68,7 +68,9 @@ nav {
 }
 
 #edit-blog-modal-content,
-#create-blog-modal-content {
+#create-blog-modal-content,
+#edit-comment-modal-content,
+#delete-comment-modal-content {
     padding: 10px;
 }
 
