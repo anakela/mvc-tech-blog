@@ -1,7 +1,7 @@
 const commentBtn = document.getElementById('post-comment');
 const commentInput = document.getElementById('comment-textbox');
 
-const editCommentBtn = document.getElementById('')
+const editCommentBtn = document.getElementById('');
 
 // Create a new comment
 commentBtn?.addEventListener('click', async (event) => {
