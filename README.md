@@ -16,8 +16,6 @@
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The Challenge
@@ -104,6 +102,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - MySQL
 - Bcrypt
 - Bcrypt.js
+- Dotenv
 
 ### What I Learned
 
@@ -153,3 +152,5 @@ Use this section to outline areas that you want to continue focusing on in futur
 - Fellow Bootcampers:
   - Nolan Spence
 - Bobbi Tarkany (Tutor)
+- Scott Nelson (TA)
+- Matthew Kaus (TA)
