@@ -48,8 +48,6 @@ async function updateBlog(event) {
     const title = document.getElementById(`edit-blog-title-${updateBlogId.dataset.blogid}`).value;
     const body = document.getElementById(`edit-blog-body-${updateBlogId.dataset.blogid}`).value;
 
-    console.log(title, body);
-
     try {
         const response = await fetch(`/api/blog/${blog_id}`, {
             method: 'PUT',

@@ -27,7 +27,6 @@ router.get('/', async (req, res) => {
 
 // Render individual blog entries.
 router.get('/blog/:id', async (req, res) => {
-    console.log(req.params.id, "GET INDIVIDUAL BLOG");
     try {
         const blogData = await Blog.findByPk(req.params.id, {
             include: [
@@ -43,7 +42,6 @@ router.get('/blog/:id', async (req, res) => {
         });
 
         const blog = blogData.get({ plain: true });
-        console.log(blog);
 
         // If the user is logged in and matches the comment poster, allow editing and updating.
         if (req.session.logged_in) {
@@ -56,7 +54,6 @@ router.get('/blog/:id', async (req, res) => {
             });
         }
 
-        console.log(blog);
         res.render('blog', {
             blog,
             logged_in: req.session.logged_in,
@@ -69,7 +66,6 @@ router.get('/blog/:id', async (req, res) => {
 // Render user profile page.
 router.get('/user-profile', withAuth, async (req, res) => {
     try {
-        console.log("User profile route");
         const userData = await User.findByPk(req.session.user_id, {
             attributes: { exclude: ['password'] },
             include: [
@@ -78,13 +74,9 @@ router.get('/user-profile', withAuth, async (req, res) => {
                 },
             ],
         });
-        console.log(userData);
         const user = userData.get({ plain: true });
-        // const blogs = blogData.get({ plain: true });
-        console.log(user);
         res.render('user-profile', {
             user,
-            // blogs,
             logged_in: true,
         });
     } catch (error) {

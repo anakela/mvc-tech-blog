@@ -72,15 +72,18 @@ THEN I am able to view comments but I am prompted to log in again before I can a
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it.
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![](./public/assets/images/mvc-tech-blog-home.png)
+![](./public/assets/images/mvc-tech-blog-sign-in.png)
+![](./public/assets/images/mvc-tech-blog-sign-up.png)
+![](./public/assets/images/mvc-tech-blog-sign-out.png)
+![](./public/assets/images/mvc-tech-blog-dashboard.png)
+![](./public/assets/images/mvc-tech-blog-new-blog.png)
+![](./public/assets/images/mvc-tech-blog-edit-blog.png)
+![](./public/assets/images/mvc-tech-blog-delete-blog.png)
+![](./public/assets/images/mvc-tech-blog-empty-comment-error.png)
+![](./public/assets/images/mvc-tech-blog-comments.png)
+![](./public/assets/images/mvc-tech-blog-edit-comment.png)
+![](./public/assets/images/mvc-tech-blog-delete-comment.png)
 
 ### Links
 

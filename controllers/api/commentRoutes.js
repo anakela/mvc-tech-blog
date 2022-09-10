@@ -8,7 +8,6 @@ router.get('/', async (req, res) => {
         const allComments = await Comment.findAll();
         res.status(200).json(allComments);
     } catch (error) {
-        console.log(error);
         res.status(500).json({ error });
     }
 });
@@ -17,15 +16,12 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
     try {
         const oneComment = await Comment.findOne({
-            // body: req.body.body,
             where: {
                 id: req.params.id,
             },
-            // user_id: req.session.user_id,
         });
         res.status(200).json(oneComment);
     } catch (error) {
-        console.log(error);
         res.status(500).json({ error });
     }
 });
@@ -40,7 +36,6 @@ router.post('/:blog_id', async (req, res) => {
         });
         res.status(200).json(newComment);
     } catch (error) {
-        console.log(error);
         res.status(500).json({ error });
     }
 });
@@ -63,7 +58,6 @@ router.put('/:id', async (req, res) => {
         }
         res.status(200).json(updateComment);
     } catch (error) {
-        console.log(error);
         res.status(500).json({ error });
     }
 });
@@ -83,7 +77,6 @@ router.delete('/:id', withAuth, async (req, res) => {
         }
         res.status(200).json(deleteComment);
     } catch (error) {
-        console.log(error);
         res.status(500).json({ error });
     }
 });

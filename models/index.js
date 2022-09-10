@@ -28,11 +28,6 @@ Comment.belongsTo(Blog, {
     foreignKey: 'blog_id',
 });
 
-// A user posts many comments.
-// User.belongsToMany(Comment, {
-//     foreignKey: 'user_id',
-// });
-
 module.exports = {
     User,
     Blog,

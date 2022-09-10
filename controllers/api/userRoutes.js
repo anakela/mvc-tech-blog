@@ -15,7 +15,6 @@ router.post('/', async (req, res) => {
 });
 
 router.post('/sign-in', async (req, res) => {
-    console.log(req.body);
     try {
         const userData = await User.findOne({
             where: { username: req.body.username },
@@ -58,7 +57,6 @@ router.post('/sign-up', async (req, res) => {
 });
 
 router.post('/sign-out', async (req, res) => {
-    console.log(req.session);
     if (req.session.logged_in) {
         req.session.destroy(() => {
             res.status(204).redirect('/sign-out');

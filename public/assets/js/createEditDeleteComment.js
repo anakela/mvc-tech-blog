@@ -25,7 +25,6 @@ commentBtn?.addEventListener('click', async (event) => {
                 body,
             })
         });
-        console.log(body);
         await response.json();
         if (response.ok) window.location.reload();
     } catch (error) {
@@ -35,14 +34,11 @@ commentBtn?.addEventListener('click', async (event) => {
 
 // Update comment
 async function updateComment(event) {
-    console.log(event, 'OMG! LINE 38!');
     event.preventDefault();
 
     const updateCommentId = document.getElementById(event.target.id);
     const comment_id = updateCommentId.dataset.commentid;
     const body = document.getElementById(`edit-comment-body-${updateCommentId.dataset.commentid}`).value;
-
-    console.log(body);
 
     try {
         const response = await fetch(`/api/comment/${comment_id}`, {

@@ -5,6 +5,7 @@ const viewRoutes = require('./viewRoutes');
 
 // Homepage
 router.use('/', viewRoutes);
+
 // Pages prepended with /api
 router.use('/api', apiRoutes);
 

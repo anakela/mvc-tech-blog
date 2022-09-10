@@ -11,7 +11,6 @@ signInBtn?.addEventListener('click', async (event) => {
 
     if (!username || !password) {
         $("#invalid-credentials-modal").modal("show");
-        console.log("triggered");
         return;
     }
 
