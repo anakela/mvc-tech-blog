@@ -106,29 +106,19 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### What I Learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+So far, this was one of the most challenging JavaScript projects on which I've worked.  Several pieces of the assignment created a challenge that took several weeks for me to complete.  These many moving parts included the following:
+- I had to create API and view routes
+- I also had to create Sequelize models for users, blogs, and comments.
+- I completed the visual rendering of the tech blog using Handlebars, which was an entirely different project in and of itself.
 
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-
-If you want more help with writing markdown, check out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+Despite how difficult building this tech blog was, it did give me the opportunity to learn a great deal about the different tools I used to put it together.  I am grateful for being able to learn more about Express Sessions, Dotenv elements that helped to keep the database secure, Bcrypt for hashing passwords and other sensitive data, and Handlebars.
 
 ### Continued Development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+In the future, I would like to add many other useful items to the tech blog.
+- First, I would like to incorporate more validation on both the front and back ends, especially when users log in or sign up for an account.
+- I would like make better use of modals for invalid login attempts.
+- I would like to provide logged in users better access to creating blogs so that they don't always have to go to their dashboards to do so.
 
 ### Useful Resources
 

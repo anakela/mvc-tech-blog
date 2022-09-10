@@ -1,10 +1,6 @@
-// const editBlogBtns = document.querySelectorAll('.edit-blog-btn');
-// console.log(editBlogBtns);
 const editBlogBtn = document.getElementById('edit-blog-btn');
 const editBlogTitle = document.getElementById('edit-blog-title');
 const editBlogBody = document.getElementById('edit-blog-body');
-// const updateBlogBtn = document.getElementById('update-blog-btn');
-// const editBlogModal = document.getElementById('edit-blog-modal');
 
 const deleteBlogBtn = document.getElementById('delete-blog-btn');
 
